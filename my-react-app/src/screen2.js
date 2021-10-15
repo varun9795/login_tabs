@@ -153,7 +153,7 @@ const UserDetails = ({deleteUser}) => {
                                               <h4>{singleUser.mobile}</h4>
                                     </td>
                                     <td class="border-0 align-middle">
-                                                <h4>Rs.{singleUser.address}</h4>
+                                                <h4>{singleUser.address}</h4>
                                     </td>
                                     <td class="border-0 align-middle" >
                                         <a href="#"  className="iconn"><i className="fa fa-trash" onClick={() => deleteUser(singleUser._id)}></i></a>
