@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-     "build":"cd my-react-app && npm run build",
+    "build": "cd my-react-app && npm run build",
     "install-client": "cd my-react-app && npm install",
     "start": "node server.js && cd my-react-app && npm start",
     "server": "nodemon server.js",
