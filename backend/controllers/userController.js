@@ -22,8 +22,6 @@ exports.LoginUser = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHander("Not exists email or password", 401));
   }
 
-  
-  // const isPasswordMatched = await user.comparePassword(password);
 
   if (user.password!=password) {
     return next(new ErrorHander("Invalid email or password", 401));
@@ -31,7 +29,7 @@ exports.LoginUser = catchAsyncErrors(async (req, res, next) => {
   sendToken(user, 200, res);
 });
 
-//Create User Profile
+//Create User 
 exports.createUser = catchAsyncErrors(async (req, res, next) => {
 
  const {name, email,mobile,address} = req.body;

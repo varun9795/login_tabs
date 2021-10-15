@@ -1,9 +1,5 @@
 import React, { Fragment,useState ,useEffect} from "react";
 import "./login.css";
-// import { Link } from "react-router-dom";
-// import MailOutlineIcon from "@material-ui/icons/MailOutline";
-// import LockOpenIcon from "@material-ui/icons/LockOpen";
-// import FaceIcon from "@material-ui/icons/Face";
 import { useDispatch, useSelector } from "react-redux";
 import {connect} from 'react-redux';
 import { createUser, deleteUser, getAllUsers } from "./Actions/userActions";
@@ -17,10 +13,6 @@ import { useAlert } from "react-alert";
 const UserDetails = ({deleteUser}) => {
   const dispatch = useDispatch();
   const alert = useAlert();
-
-  // const { error, loading} = useSelector(
-  //   (state) => state.user
-  // );
 
   const {error,users} = useSelector(state => state.allusers);
   
@@ -78,7 +70,6 @@ const UserDetails = ({deleteUser}) => {
                 onSubmit={registerSubmit}
               >
                 <div className="signUpName">
-                  {/* <FaceIcon /> */}
                   <input
                     type="text"
                     placeholder="Name"
@@ -90,7 +81,6 @@ const UserDetails = ({deleteUser}) => {
                   />
                 </div>
                 <div className="signUpEmail">
-                  {/* <MailOutlineIcon /> */}
                   <input
                     type="email"
                     placeholder="Email"
@@ -101,7 +91,6 @@ const UserDetails = ({deleteUser}) => {
                   />
                 </div>
                 <div className="signUpPassword">
-                  {/* <LockOpenIcon /> */}
                   <input
                     type="tel"
                     placeholder="Mobile number"
