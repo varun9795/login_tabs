@@ -1,0 +1,31 @@
+{
+  "name": "assignmentemesis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+     "build":"cd my-react-app && npm run build",
+    "install-client": "cd my-react-app && npm install",
+    "start": "node server.js && cd my-react-app && npm start",
+    "server": "nodemon server.js",
+    "client": "cd my-react-app && npm start ",
+    "data:import": "node backend/seederScript.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  npm run install-client && npm run build "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.3.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.10",
+    "nodemon": "^2.0.13",
+    "validator": "^13.6.0"
+  }
+}
